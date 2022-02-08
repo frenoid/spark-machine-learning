@@ -15,3 +15,5 @@ src/main/resources/out
 
 /metastore_db/
 derby.log
+
+.bsp
