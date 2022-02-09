@@ -13,9 +13,10 @@ The data was provided by [Dr LIU FAN from NUS-ISS](https://www.iss.nus.edu.sg/ab
 Data source details TBA
 
 ## Structure
-Each Scala object contains an example of a machine learning method
-1. [Linear Regression on Sample Data](src/main/scala/com/normanlimxk/SparkML/LinearRegressionSample.scala)
-2. [Linear Regression on Ecommerce Data](src/main/scala/com/normanlimxk/SparkML/LinearRegressionEcommerce.scala)
+Each class under src.main.scala.com.normanlimxk.SparkML contains examples of each Machine Learning method
+1. [Linear Regression](src/main/scala/com/normanlimxk/SparkML/LinearRegression)
+2. [Classification](src/main/scala/com/normanlimxk/SparkML/Classification)
+
 
 
 The project uses the [spark-sbt.g8 template from MrPowers](https://github.com/MrPowers/spark-sbt.g8)
