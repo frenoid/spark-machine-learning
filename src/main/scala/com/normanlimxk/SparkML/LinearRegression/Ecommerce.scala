@@ -1,10 +1,10 @@
-package com.normanlimxk.SparkML
+package com.normanlimxk.SparkML.LinearRegression
 
-import org.apache.spark.ml.regression.LinearRegression
-import org.apache.spark.ml.linalg.Vector
+import com.normanlimxk.SparkML.SparkSessionWrapper
 import org.apache.spark.ml.feature.VectorAssembler
+import org.apache.spark.ml.regression.LinearRegression
 
-object LinearRegressionEcommerce extends SparkSessionWrapper {
+object Ecommerce extends SparkSessionWrapper {
   def main(args: Array[String]): Unit = {
 
     // Load data into dataframe

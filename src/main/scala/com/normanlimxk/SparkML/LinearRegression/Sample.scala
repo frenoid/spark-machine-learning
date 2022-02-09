@@ -1,8 +1,9 @@
-package com.normanlimxk.SparkML
+package com.normanlimxk.SparkML.LinearRegression
 
+import com.normanlimxk.SparkML.SparkSessionWrapper
 import org.apache.spark.ml.regression.LinearRegression
 
-object LinearRegressionSample extends SparkSessionWrapper {
+object Sample extends SparkSessionWrapper {
   def main(args: Array[String]): Unit = {
     // Load data
     val allData = spark.read
