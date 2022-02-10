@@ -6,6 +6,8 @@ import org.apache.spark.ml.evaluation.{BinaryClassificationEvaluator, Multiclass
 
 object LogisticRegressionSample extends SparkSessionWrapper {
   def main(args: Array[String]): Unit = {
+    import spark.implicits._
+
     // Load the training data
     val dataset = spark.read
       .format("libsvm")
@@ -13,7 +15,18 @@ object LogisticRegressionSample extends SparkSessionWrapper {
       .load("src/main/resources/Classification/sample_libsvm_data.txt")
     dataset.show(false)
 
-    // To be continued
-  }
+    // Split into a training set and a testing set
+    val Array(trainData, testData) = dataset.randomSplit(Array(0.7, 0.3))
 
+    // Create LogisticRegression model
+    val lgrModel = new LogisticRegression()
+
+    // Fit model with training set
+    val fittedModel = lgrModel.fit(trainData)
+
+    // Evaluate with testing set
+    val predictionsAndLabels = fittedModel.evaluate(testData)
+    predictionsAndLabels.predictions.show()
+    predictionsAndLabels.predictions.select($"probability").show(10, false)
+  }
 }
