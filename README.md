@@ -14,8 +14,8 @@ I have translated the original Python code to Scala
 git clone https://github.com/frenoid/tour-of-spark.git
 ```
 ### Structure
-1. [src/main/scala/com/normanlimxk/sparkworkshop](src/main/scala/com/normanlimxk/sparkworkshop) contains the Main Scala class
-2. [src/main/resources](src/main/resources) contains data
+1. [src/main/scala/com/normanlimxk/SparkML](src/main/scala/com/normanlimxk/SparkML) contains the ML code
+2. [src/main/resources](src/main/resources) contains data grouped by ML algorithm
 3. [build.sbt](./build.sbt) contains a list of dependencies. Similar to pom.xml in Maven
 
 ### Running the Spark job
